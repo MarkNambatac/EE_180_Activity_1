@@ -1,0 +1,51 @@
+#include <avr/io.h>
+#define ADCHVal ADCH <<8
+
+int main(void)
+{
+  
+  Serial.begin(9600);
+  uint8_t ADClow;
+  uint16_t ADCValue, ADChigh;
+  
+
+  ADCinitializations();
+  UARTinitializations();
+  DDRD = 0x4; /*0b00000100*/
+ 
+  while(1)
+  {
+    while (ADCSRA & (1<<ADSC));
+    ADCSRA |= (1<<ADSC);
+    ADClow = ADCL;
+    ADChigh = (ADCH<<8);
+    ADCValue = ADClow|ADChigh; 
+    
+   int resistance = (10000/1023) * ADCValue;
+   
+   if ((resistance > 4000) && (resistance <7000))
+       {
+          PORTD = 0x4;
+       } 
+       
+   else
+       {
+          PORTD = 0x0;
+       }
+  }
+}
+
+ 
+void UARTinitializations(void)
+ {
+  UCSR0B = (1<< TXEN0) | (1<<RXEN0); 
+  UCSR0C = (1<<UCSZ01) | (1<<UCSZ00);
+ }
+
+void ADCinitializations (void)
+ {
+  ADMUX = (1<<REFS0)| (1<<MUX1)| (1<< MUX0);
+  ADCSRA = (1<<ADEN)| (1<<ADPS2) | (1<<ADPS1)| (1<<ADPS0);
+  DIDR0 = (1<<ADC3D);
+ 
+ }
