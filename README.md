@@ -10,7 +10,7 @@ Deadline Sept 27, 2016. Defend by group.
 **Task List**
 - [ ] Set ADC, UART, PORTD *since digital pin 2 is in PORTD* and other Registers
 - [ ] Set ADC to right adjust *ADLAR = 0*
-- [ ] Transmit via UART (9600 , 8n1) *9600 baud rate and 8bit data, no parity bit, 1 stop bit
+- [ ] Transmit via UART (9600 , 8n1) *9600 baud rate and 8bit data, no parity bit, 1 stop bit*
 
 
 
