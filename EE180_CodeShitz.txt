@@ -4,7 +4,6 @@
 int main(void)
 {
   
-  Serial.begin(9600);
   uint8_t ADClow;
   uint16_t ADCValue, ADChigh;
   
