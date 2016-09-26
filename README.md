@@ -14,4 +14,4 @@ Deadline Sept 27, 2016. Defend by group.
 
 Useful websites :
 - [For UART Configuration](http://www.electroschematics.com/10385/avr-uart-configuration/)
-- [For Analog Digital Configuration] (http://maxembedded.com/2011/06/the-adc-of-the-avr/)
+- [For ADC Configuration] (http://maxembedded.com/2011/06/the-adc-of-the-avr/)
