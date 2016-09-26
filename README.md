@@ -6,12 +6,11 @@
 **BONUS** : transmit the resistance value via UART    
 
 You are not allowed to use existing functions except for the delay function.     
-Deadline Sept 27, 2016. Defend by group.
+Deadline Sept 27, 2016. Defend by group.  :joy:
 
 **Task List**  :smiley:
 - [ ] Set ADC, UART, PORTD *since digital pin 2 is in PORTD* and other Registers
 - [ ] Set ADC to right adjust *ADLAR = 0*
 - [ ] Transmit via UART (9600 , 8n1) *9600 baud rate and 8bit data, no parity bit, 1 stop bit*
 
-@christian-unoxx Naa ra bai HAHAHAH :joy:
 
