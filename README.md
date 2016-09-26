@@ -13,5 +13,5 @@ Deadline Sept 27, 2016. Defend by group.
 - [ ] Set ADC to right adjust *ADLAR = 0*
 - [ ] Transmit via UART (9600 , 8n1) *9600 baud rate and 8bit data, no parity bit, 1 stop bit*
 
-
+@christian-unoxx Naa ra bai HAHAHAH :joy:
 
