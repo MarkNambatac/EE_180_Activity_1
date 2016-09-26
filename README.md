@@ -12,4 +12,6 @@ Deadline Sept 27, 2016. Defend by group.
 - [ ] Set ADC to right adjust *ADLAR = 0*
 - [ ] Transmit via UART (9600 , 8n1) *9600 baud rate and 8bit data, no parity bit, 1 stop bit*
 
-
+Useful websites :
+[For UART Configuration](http://www.electroschematics.com/10385/avr-uart-configuration/)
+[For Analog Digital Configuration] (http://maxembedded.com/2011/06/the-adc-of-the-avr/)
