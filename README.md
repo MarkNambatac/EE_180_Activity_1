@@ -15,3 +15,4 @@ Deadline Sept 27, 2016. Defend by group.
 Useful websites :
 - [For UART Configuration](http://www.electroschematics.com/10385/avr-uart-configuration/)
 - [For ADC Configuration] (http://maxembedded.com/2011/06/the-adc-of-the-avr/)
+- [Getting Started with Arduino] (https://drive.google.com/open?id=0B5zK2A31iDUvdDRpS0RFaVpwOUk)
