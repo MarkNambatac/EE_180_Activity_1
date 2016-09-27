@@ -4,9 +4,9 @@
 int main(void)
 {
  
-  uint8_t ADClow ;
-  uint16_t ADCValue, ADChigh, FINAL;
-  int FINALHIGH;
+  uint8_t ADClow, FINAL ;
+  uint16_t ADCValue, ADChigh, ;
+ 
 
   ADCinitializations();
   UARTinitializations();
@@ -33,9 +33,7 @@ int main(void)
        
    else
        {
-          
-     while(!(UCSR0A & 0b00100000)); //Wait until data register is empty
-     UDR0 = FINAL;
+   
           PORTD = 0x0;
        }
   }
