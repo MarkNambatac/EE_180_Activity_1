@@ -1,12 +1,12 @@
 #include <avr/io.h>
-#define ADCHVal ADCH <<8
+
 
 int main(void)
 {
-  
-  uint8_t ADClow;
-  uint16_t ADCValue, ADChigh;
-  
+ 
+  uint8_t ADClow ;
+  uint16_t ADCValue, ADChigh, FINAL;
+  int FINALHIGH;
 
   ADCinitializations();
   UARTinitializations();
@@ -18,17 +18,24 @@ int main(void)
     ADCSRA |= (1<<ADSC);
     ADClow = ADCL;
     ADChigh = (ADCH<<8);
-    ADCValue = ADClow|ADChigh; 
-    
-   int resistance = (10000/1023) * ADCValue;
-   
+    ADCValue = ADClow | ADChigh; 
+    FINAL = ADCValue >> 2; 
+  
+  int  resistance = (10000/255) * FINAL;
+  
+
    if ((resistance > 4000) && (resistance <7000))
-       {
+      {
+     
           PORTD = 0x4;
+     
        } 
        
    else
        {
+          
+     while(!(UCSR0A & 0b00100000)); //Wait until data register is empty
+     UDR0 = FINAL;
           PORTD = 0x0;
        }
   }
